@@ -57,4 +57,4 @@ The environment is considered solved, when the average (over 100 episodes) of th
 2. Place the file in the DRLND GitHub repository, in the `p2_continuous-control/` folder, and unzip (or decompress) the file. 
 
 ### Training annd Run the smart agent
-Follow the instructions in Continuous_Control.ipynb to get started with training the deep reinforcement learning agent, at last, the trained agent runs.
+Follow the instructions in **Continuous_Control.ipynb** to get started with training the deep reinforcement learning agent, at last, the trained agent runs.
