@@ -14,7 +14,7 @@ By executing the action, the reward and the new state are updated, and these exp
 For learning the model weight, the local critic network parameters are 
 updated by minimizing the error between estimated Q target and the actual Q value at current timestep. Then the local actor network parameters can be learned by maximizing the expected Q(s,a') values where a' is from the actor network prediction &pi;(s). 
 After the local critic and local actor network weights are updated, a soft update on the target critic and actor network is done.
-<img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/tree/master/images/DDPG.png" width="60%" align="top-left" alt="" title="DDPG algorithm" />
+<img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/blob/master/images/DDPG.png" width="60%" align="top-left" alt="" title="DDPG algorithm" />
 
 For learning, data collection process are performed in a parallel, i.e., the 20 identical agent environment is used to collect the experience data (state, action, reward, next_state, done) which are then added to replay buffer. 
  
@@ -32,26 +32,26 @@ Uses similar architecture as actor network, which takes both state observation a
 Fully connected layer 1 - 400 nodes  
 Fully connected layer 2 - 300 nodes  
 
-#### Hyperparameters
+#### Hyperparameters  
 
-
-Batch size | 128
+Hyperparameters | value
 ---|---
+Batch size | 128
 Gamma | 0.99
 Tau | 1e-3
 Actor learning rate | 1e-3 
 Actor learning rate minimum | 1e-4 
 Critic learning rate | 1e-3 
 Critic learning rate minimum | 1e-4 
-Learn every | 20 steps
-Learn | 8 minibatches per learning step
+Steps / each Learn   | 20
+Minibatches per learning step| 8 
 OU sigma |0.2
 OU theta | 0.15
 Epsilon decay for noise process | 1e-6
 
 
 ### Score plot
-The environment is solved at **38** episodes. 
+The environment is solved at **98** episodes. 
 <img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/tree/master/images/DDPG.png" width="60%" align="top-left" alt="" title="DDPG algorithm" />
 
 ![score plot](https://github.com/score_plot.png)  
