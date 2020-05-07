@@ -52,8 +52,8 @@ Epsilon decay for noise process | 1e-6
 
 ### Score plot
 The environment is solved at **107** episodes. 
-<img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/blob/master/images/DRL_P2_results.png?raw=true" width="60%" align="top-left" alt="" title="Results" />
-
+<img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/blob/master/images/DRL_P2_results.png?raw=true" width="60%" align="top-left" alt="" title="Results" />  
+  
 ### Future work
 ##### Improving performance
 Training time takes too long in each episode. Even tough GPU has been turned on for training at ddpgn_agent.py -> device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu"). However, overall training time still took too long, about three and half hours for 100 episodes.
