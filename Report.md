@@ -13,7 +13,7 @@ based on the current policy network &pi;,  the noise term is added to allow for 
 By executing the action, the reward and the new state are updated, and these experiences are added to the replay buffer.
 For learning the model weight, the local critic network parameters are 
 updated by minimizing the error between estimated Q target and the actual Q value at current timestep. Then the local actor network parameters can be learned by maximizing the expected Q(s,a') values where a' is from the actor network prediction &pi;(s). 
-After the local critic and local actor network weights are updated, a soft update on the target critic and actor network is done.
+After the local critic and local actor network weights are updated, a soft update on the target critic and actor network is done.  
 <img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/blob/master/images/DDPG.png" width="60%" align="top-left" alt="" title="DDPG algorithm" />
 
 For learning, data collection process are performed in a parallel, i.e., the 20 identical agent environment is used to collect the experience data (state, action, reward, next_state, done) which are then added to replay buffer. 
