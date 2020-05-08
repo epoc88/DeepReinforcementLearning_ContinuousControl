@@ -85,12 +85,6 @@ class Agent():
             action += self.epsilon * self.noise.sample()
         return np.clip(action, -1, 1)
 
-    def decay_lr(self):
-        self.lr_actor = self.lr_actor * LR_DECAY
-        self.lr_critic = self.lr_critic * LR_DECAY
-        self.actor_optimizer = optim.Adam(self.actor_local.parameters(), lr=self.lr_actor)
-        self.critic_optimizer = optim.Adam(self.critic_local.parameters(), lr=self.lr_critic, weight_decay=WEIGHT_DECAY)
-
     def reset(self):
         self.noise.reset()
 
