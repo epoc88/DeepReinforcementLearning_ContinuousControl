@@ -51,7 +51,7 @@ Epsilon decay for noise process | 1e-6
 
 
 ### Score plot
-The environment is solved at **107** episodes. 
+The environment is solved at **103** episodes. 
 <img src="https://github.com/epoc88/DeepReinforcementLearning_ContinuousControl/blob/master/images/DRL_P2_results.png?raw=true" width="60%" align="top-left" alt="" title="Results" />  
   
 ### Future work
